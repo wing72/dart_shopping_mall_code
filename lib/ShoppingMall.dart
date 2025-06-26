@@ -137,11 +137,12 @@ showTotal() {
 
 void clearCart() {
   print('6번을 입력 장바구니를 비웁니다.');
-  if (totalPrice == 0) {//조건 토탈프라이스 가 0인지 확인해서 비어있는지 확인
+  if (totalPrice == 0) {
+    //조건 토탈프라이스 가 0인지 확인해서 비어있는지 확인
     print('이미 장바구니가 비어있습니다.');
   } else {
     cart.clear();
-    totalPrice = 0;//0으로 초기화
+    totalPrice = 0; //0으로 초기화
     print('장바구니를 초기화합니다.');
   }
 }
@@ -149,9 +150,10 @@ void clearCart() {
 showEnd() {
   print('정말 종료하시겠습니까?');
   var endinput = stdin.readLineSync();
-  if (endinput == "5") {//5입력 했는지 확인
+  if (endinput == "5") {
+    //5입력 했는지 확인
     print('이용해 주셔서 감사합니다 ~ 안녕히 가세요!');
-    exit(0);// dart:io에서 지원하는 종료 명령어 
+    exit(0); // dart:io에서 지원하는 종료 명령어
   } else {
     print('종료하지 않습니다.');
   }
