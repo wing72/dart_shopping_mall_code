@@ -2,6 +2,14 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:dart_shopping_mall_code/Product.dart';
 
+// - **속성**
+//     - 판매하는 상품 목록 (`List<Product>`)
+//     - 장바구니에 담은 상품들의 총 가격 (`int`)
+// - **메서드**
+//     - 상품 목록을 출력하는 메서드 (`showProducts()`)
+//     - 상품을 장바구니에 담는 메서드 (`addToCart()`)
+// - 장바구니에 담은 상품의 총 가격을 출력하는 메서드 (`showTotal()`)
+
 class ShoppingMall {
   void hall() {
     print(
@@ -20,9 +28,14 @@ class ShoppingMall {
 
     switch (input) {
       case "1":
-        final goods = Product();
-        mall.hall();
-
+        for (final Product in Products()) {
+          for (final product in products) {
+            // 각 product 객체의 속성(goods, price)에 접근하여 출력합니다.
+            // '.'(점)을 찍어서 객체 내부의 변수나 함수를 사용할 수 있습니다.
+            print('상품명: ${product.goods}, 가격: ${product.price}원');
+          }
+        }
+        break;
       case "2":
       // [2] 장바구니에 담기
       case "3":
@@ -30,7 +43,7 @@ class ShoppingMall {
       case "4":
       // [4] 프로그램 종료
       case "6":
-        Defalt:
+      default:
         print('잘못된 입력 값입니다.');
     }
 

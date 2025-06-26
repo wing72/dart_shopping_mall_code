@@ -1,11 +1,18 @@
+// - **속성**
+//     - 상품 이름 (`String`)
+//     - 상품 1개당 가격 (`int`)
+
 class Product {
-  void cart;
-  final List<String> name = [
-    '삼성 비스포크 스팀 로봇청소기',
-    '삼성 비스포크 냉장고',
-    '삼성 비스포크 무풍 에어컨',
-    '삼성 비스포크 전자레인지',
-    '삼성 비스포크 ai세탁기',
-  ];
-  final List<int> price = [1240000, 1140000, 810000, 190000, 940000];
+  final String goods;
+  final int price;
+
+  Product({required this.goods, required this.price});
 }
+
+List<Product> Products = [
+  Product(goods: '1', price: 10000),
+  Product(goods: '2', price: 20000),
+  Product(goods: '3', price: 30000),
+  Product(goods: '4', price: 40000),
+  Product(goods: '5', price: 50000),
+];
