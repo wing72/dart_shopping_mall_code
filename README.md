@@ -19,12 +19,7 @@
   
 
 
-### 📂 프로젝트 구조
+### 📂 실제 실행 사진과 프로젝트 구조
 
 
-├── bin/
-│   └── main.dart       # 프로그램의 시작점. ShoppingMall 객체를 생성하고 실행합니다.
-│
-├── lib/
-├── shopping_mall.dart  # 쇼핑몰의 핵심 로직과 데이터를 관리하는 ShoppingMall 클래스(기능)
-└── product.dart        # 상품 정보를 담는 Product 데이터 클래스
+> ![Image](https://github.com/user-attachments/assets/88390288-c48d-481b-84ec-358613922f3e) ![Image](https://github.com/user-attachments/assets/a41ee1aa-6e7e-4a0c-a7a1-cd9c17ed9ac9) ![Image](https://github.com/user-attachments/assets/b50a7e66-8ffc-4ec9-bf36-be48d4d02c20)
