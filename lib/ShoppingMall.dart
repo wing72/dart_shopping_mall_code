@@ -11,13 +11,9 @@ import 'package:dart_shopping_mall_code/Product.dart';
 // - 장바구니에 담은 상품의 총 가격을 출력하는 메서드 (`showTotal()`)
 
 class ShoppingMall {
-  // 1. final 변수 선언
   final List<Product> products;
-  final Map<int, int> cart = {}; // 이 변수는 선언과 동시에 초기화했으므로 OK
+  final Map<int, int> cart = {};
 
-  // 2. 생성자를 통해 'products' 변수를 초기화합니다.
-  //    이렇게 하면, ShoppingMall 객체가 만들어질 때 products 변수에
-  //    반드시 값이 할당될 것이라고 Dart가 보장할 수 있습니다.
   ShoppingMall({required this.products});
 
   void run() {
@@ -38,12 +34,16 @@ class ShoppingMall {
           }
           break;
         case "2":
+          break;
         // [2] 장바구니에 담기
         case "3":
+          break;
         // [3] 장바구니에 담긴 상품의 총 가격 보기
         case "4":
+          break;
         // [4] 프로그램 종료
         case "6":
+          break;
         default:
           print('잘못된 입력 값입니다.');
           break;
