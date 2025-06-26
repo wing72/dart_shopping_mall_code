@@ -1,13 +1,6 @@
 import 'dart:io';
 import 'dart:convert';
-
-// - **속성**
-//     - 판매하는 상품 목록 (`List<Product>`)
-//     - 장바구니에 담은 상품들의 총 가격 (`int`)
-// - **메서드**
-//     - 상품 목록을 출력하는 메서드 (`showProducts()`)
-//     - 상품을 장바구니에 담는 메서드 (`addToCart()`)
-//     - 장바구니에 담은 상품의 총 가격을 출력하는 메서드 (`showTotal()`)
+import 'package:dart_shopping_mall_code/Product.dart';
 
 class ShoppingMall {
   void hall() {
@@ -27,20 +20,19 @@ class ShoppingMall {
 
     switch (input) {
       case "1":
-        print(object);
-        [1] 상품 목록 보기
-          case "2":
-          // [2] 장바구니에 담기
-          case "3":
-          // [3] 장바구니에 담긴 상품의 총 가격 보기
-          case "4":
-          // [4] 프로그램 종료
-          case "6":
+        final goods = Product();
+        mall.hall();
+
+      case "2":
+      // [2] 장바구니에 담기
+      case "3":
+      // [3] 장바구니에 담긴 상품의 총 가격 보기
+      case "4":
+      // [4] 프로그램 종료
+      case "6":
         Defalt:
         print('잘못된 입력 값입니다.');
     }
-    //   ,
-    // }
 
     print('$input을 선택 하셨습니다 상품목록을 불러 옵니다.');
   }
