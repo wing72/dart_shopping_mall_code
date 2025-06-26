@@ -62,7 +62,7 @@ void _showmenu() {
   );
 
   stdout.write(
-    '[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품의 총 가격 보기 / [4] 프로그램 종료 / [6] 장바구니 비우기\n',
+    '[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품의 총 가격 보기 / [4] 프로그램 종료 / [6] 장바구니 비우기\n', //---을 화면에 맞춰서 출력이 안되서 아쉬움
   );
 
   print(
@@ -79,7 +79,7 @@ showProducts() {
   }
 }
 
-final Map<String, int> cart = {};
+// final Map<String, int> cart = {}; 만들다보니 결국 안썻다..
 
 int totalPrice = 0;
 
@@ -113,6 +113,7 @@ void addToCart() {
     final int quantity = int.parse(quantityInput);
 
     if (quantity <= 0) {
+      //개수가 0이나 더작은지 확인하고 0이나 더작으면 메시지 출력
       print('0개보다 많은 개수의 상품만 담을 수 있어요 !');
       return;
     }
@@ -136,11 +137,11 @@ showTotal() {
 
 void clearCart() {
   print('6번을 입력 장바구니를 비웁니다.');
-  if (totalPrice == 0) {
+  if (totalPrice == 0) {//조건 토탈프라이스 가 0인지 확인해서 비어있는지 확인
     print('이미 장바구니가 비어있습니다.');
   } else {
     cart.clear();
-    totalPrice = 0;
+    totalPrice = 0;//0으로 초기화
     print('장바구니를 초기화합니다.');
   }
 }
@@ -148,9 +149,9 @@ void clearCart() {
 showEnd() {
   print('정말 종료하시겠습니까?');
   var endinput = stdin.readLineSync();
-  if (endinput == "5") {
+  if (endinput == "5") {//5입력 했는지 확인
     print('이용해 주셔서 감사합니다 ~ 안녕히 가세요!');
-    exit(0);
+    exit(0);// dart:io에서 지원하는 종료 명령어 
   } else {
     print('종료하지 않습니다.');
   }
