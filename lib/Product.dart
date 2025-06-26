@@ -5,13 +5,8 @@
 class Product {
   final String goods;
   final int price;
-  final int productcount;
 
-  Product({
-    required this.goods,
-    required this.price,
-    required this.productcount,
-  });
+  Product({required this.goods, required this.price});
 }
 
 List<Product> products = [

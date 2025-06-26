@@ -26,6 +26,7 @@ class ShoppingMall {
         case "1":
           print('$input을 선택 하셨습니다 상품목록을 불러 옵니다.');
           print('---------------------상품 목록---------------------');
+          showProducts();
           print('---------------------------------------------------');
           break;
         case "2":
@@ -65,7 +66,10 @@ class ShoppingMall {
   }
 
   showProducts() {
-    for (;;) {}
+    print('${products.length}종의 상품이 있습니다.');
+    for (var Product in products) {
+      print('${Product.goods}/${Product.price}원');
+    }
   }
 
   addToCart() {}
